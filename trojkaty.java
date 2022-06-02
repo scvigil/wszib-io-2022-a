@@ -10,6 +10,7 @@ class Trojkaty {
      * @param {float} c - Długość trzeciego boku.
      */
 
+
 	 public static int ileJednakowych(float a, float b, float c){
                    int jednakowe = 0; // tutaj zliczamy ile jest jednakowych bokow
                    if (a == b) {
@@ -21,7 +22,14 @@ class Trojkaty {
                    return jednakowe;
                }
 
-		
+
+	public static boolean czyProstokatny(float a, float b, float c){
+                   if (a * a + b * b == c*c) return true;
+                   if (b * b + c * c == a*a) return true;
+                   if (a * a + c * c == b*b) return true;
+                   return false;
+               }	
+  
     public static void jakiTrojkat(float a, float b, float c){
         int jednakoweDlugosci =  ileJednakowych(a,b,c); //  tutaj zliczamy ile jest jednakowych bokow
 	if (jednakoweDlogosci > 1) {          
